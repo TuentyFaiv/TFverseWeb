@@ -1,0 +1,70 @@
+---
+  const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__container">
+    <ul class="footer__list">
+      <li class="footer__title">
+        Resources
+      </li>
+      <li class="footer__item">
+        <a href="/docs" class="footer__link">
+          Documentation
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="/roadmap" class="footer__link">
+          Roadmap
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="/resources" class="footer__link">
+          Assets used
+        </a>
+      </li>
+    </ul>
+    <span class="footer__side">
+      <a href="https://github.com/TuentyFaiv/generate" class="footer__link footer__link--icon" target="_blank" rel="noopener noreferrer">
+        <img src="/icon-github.png" alt="GitHub" class="footer__icon" >
+      </a>
+      NAME
+    </span>
+  </div>
+  <small class="footer__copy">
+    MIT License © {year} NAME
+  </small>
+</footer>
+
+<style lang="postcss">
+  .footer {
+    @apply w-full bg-stone-800 px-4 py-6 md:px-6 lg:px-8 lg:py-12 xl:px-10;
+    &__container {
+      @apply w-full flex justify-between items-start gap-5;
+    }
+    &__list {
+      @apply flex flex-col gap-2;
+    }
+    &__title {
+      @apply text-sm font-semibold;
+    }
+    &__item {
+      @apply w-max;
+    }
+    &__link {
+      @apply block min-w-max text-sm font-medium;
+      &--icon {
+        @apply w-12 h-12;
+      }
+    }
+    &__icon {
+      @apply block w-full h-full object-contain;
+    }
+    &__side {
+      @apply flex items-center justify-center gap-2 text-sm font-medium;
+    }
+    &__copy {
+      @apply block text-xs font-medium text-end;
+    }
+  }
+</style>

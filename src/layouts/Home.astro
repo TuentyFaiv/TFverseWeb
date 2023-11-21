@@ -1,0 +1,37 @@
+---
+import Header from "@sharing/organisms/Header.astro";
+import Footer from "@sharing/organisms/Footer.astro";
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>tfverse</title>
+  </head>
+  <body>
+    <Header />
+    <main class="layout">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style lang="postcss" is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  html {
+    @apply bg-stone-900 text-white;
+  }
+  .layout {
+    @apply min-h-screen px-4 md:px-6 lg:px-8 xl:px-10;
+  }
+</style>
